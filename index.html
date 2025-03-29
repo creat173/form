@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News and Payment</title>
+    <style>
+        body {
+            background-color: pink;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        header {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+        .options {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .options a {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #FF4C4C;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .options a:hover {
+            background-color: #FF1F1F;
+        }
+        .back-option {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .back-option a {
+            padding: 10px 20px;
+            background-color: #FF4C4C;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .back-option a:hover {
+            background-color: #FF1F1F;
+        }
+        .payment-message {
+            margin-top: 30px;
+            font-size: 1.5em;
+        }
+        .thank-you {
+            text-align: center;
+            font-size: 2em;
+            margin-top: 50px;
+            color: green;
+        }
+        .payment-form-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .payment-form-container input, .payment-form-container textarea {
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .payment-form-container button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #FF4C4C;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .payment-form-container button:hover {
+            background-color: #FF1F1F;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        নিউজ ওয়েবসাইট এবং পেমেন্ট অপশন
+    </header>
+    
+    <div class="options">
+        <a href="#bdNews">BD News</a>
+        <a href="#foreignNews">Foreign News</a>
+        <a href="#internationalNews">International News</a>
+        <a href="#sportsNews">Sports News</a>
+    </div>
+
+    <!-- BD News Section -->
+    <div id="bdNews" class="section">
+        <h2>বাংলাদেশ নিউজ</h2>
+        <p>এখানে বাংলাদেশ সম্পর্কিত খবর দেখানো হবে।</p>
+        <div class="payment-message">
+            <p>খবর পেতে পেমেন্ট করুন</p>
+            <a href="#paymentForm" class="back-option">বিকাশ, নগদ, ভিসা</a>
+        </div>
+        <div class="back-option">
+            <a href="#back">Back</a>
+        </div>
+    </div>
+
+    <!-- Foreign News Section -->
+    <div id="foreignNews" class="section">
+        <h2>বিদেশি নিউজ</h2>
+        <p>এখানে বিদেশি সম্পর্কিত খবর দেখানো হবে।</p>
+        <div class="payment-message">
+            <p>খবর পেতে পেমেন্ট করুন</p>
+            <a href="#paymentForm" class="back-option">বিকাশ, নগদ, ভিসা</a>
+        </div>
+        <div class="back-option">
+            <a href="#back">Back</a>
+        </div>
+    </div>
+
+    <!-- International News Section -->
+    <div id="internationalNews" class="section">
+        <h2>আন্তর্জাতিক নিউজ</h2>
+        <p>এখানে আন্তর্জাতিক সম্পর্কিত খবর দেখানো হবে।</p>
+        <div class="payment-message">
+            <p>খবর পেতে পেমেন্ট করুন</p>
+            <a href="#paymentForm" class="back-option">বিকাশ, নগদ, ভিসা</a>
+        </div>
+        <div class="back-option">
+            <a href="#back">Back</a>
+        </div>
+    </div>
+
+    <!-- Sports News Section -->
+    <div id="sportsNews" class="section">
+        <h2>খেলাধুলার নিউজ</h2>
+        <p>এখানে খেলাধুলা সম্পর্কিত খবর দেখানো হবে।</p>
+        <div class="payment-message">
+            <p>খবর পেতে পেমেন্ট করুন</p>
+            <a href="#paymentForm" class="back-option">বিকাশ, নগদ, ভিসা</a>
+        </div>
+        <div class="back-option">
+            <a href="#back">Back</a>
+        </div>
+    </div>
+
+    <!-- Payment Form Section -->
+    <div id="paymentForm" class="payment-form-container">
+        <h2>পেমেন্ট তথ্য ফর্ম</h2>
+        <form id="paymentDetails">
+            <input type="text" id="name" name="name" placeholder="নাম" required><br><br>
+            <input type="text" id="mobile" name="mobile" placeholder="মোবাইল নম্বর" required><br><br>
+            <textarea id="address" name="address" placeholder="ঠিকানা" required></textarea><br><br>
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+    </div>
+
+    <div id="thankYouMessage" class="thank-you" style="display:none;">
+        ধন্যবাদ
+    </div>
